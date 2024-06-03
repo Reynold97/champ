@@ -1,55 +1,25 @@
-<h1 align='Center'>Champ: Controllable and Consistent Human Image Animation with 3D Parametric Guidance</h1>
-
-<div align='Center'>
-    <a href='https://github.com/ShenhaoZhu' target='_blank'>Shenhao Zhu</a><sup>*1</sup>&emsp;
-    <a href='https://github.com/Leoooo333' target='_blank'>Junming Leo Chen</a><sup>*2</sup>&emsp;
-    <a href='https://github.com/daizuozhuo' target='_blank'>Zuozhuo Dai</a><sup>3</sup>&emsp;
-    <a href='https://ai3.fudan.edu.cn/info/1088/1266.htm' target='_blank'>Yinghui Xu</a><sup>2</sup>&emsp;
-    <a href='https://cite.nju.edu.cn/People/Faculty/20190621/i5054.html' target='_blank'>Xun Cao</a><sup>1</sup>&emsp;
-    <a href='https://yoyo000.github.io/' target='_blank'>Yao Yao</a><sup>1</sup>&emsp;
-    <a href='http://zhuhao.cc/home/' target='_blank'>Hao Zhu</a><sup>+1</sup>&emsp;
-    <a href='https://sites.google.com/site/zhusiyucs/home' target='_blank'>Siyu Zhu</a><sup>+2</sup>
-</div>
-<div align='Center'>
-    <sup>1</sup>Nanjing University <sup>2</sup>Fudan University <sup>3</sup>Alibaba Group
-</div>
-<div align='Center'>
-    <sup>*</sup>Equal Contribution
-    <sup>+</sup>Corresponding Author
-</div>
-
-<div align='Center'>
-    <a href='https://fudan-generative-vision.github.io/champ/#/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
-    <a href='https://arxiv.org/abs/2403.14781'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
-    <a href='https://youtu.be/2XVsy9tQRAY'><img src='https://badges.aleen42.com/src/youtube.svg'></a>
-    <a href='assets/wechat.jpeg'><img src='https://badges.aleen42.com/src/wechat.svg'></a>
-</div>
-
-https://github.com/fudan-generative-vision/champ/assets/82803297/b4571be6-dfb0-4926-8440-3db229ebd4aa
-
-# Framework
-
-![framework](assets/framework.jpg)
-
-# News
-
-- **`2024/05/05`**:  🎉🎉🎉[Sample training data on HuggingFace](https://huggingface.co/datasets/fudan-generative-ai/champ_trainning_sample) released.
-- **`2024/05/02`**:  🌟🌟🌟Training source code released [#99](https://github.com/fudan-generative-vision/champ/pull/99).
-- **`2024/04/28`**:  👏👏👏Smooth SMPLs in Blender method released [#96](https://github.com/fudan-generative-vision/champ/pull/96).
-- **`2024/04/26`**:  🚁Great Blender Adds-on [CEB Studios
-](https://www.patreon.com/cebstudios/posts) for various SMPL process!
-- **`2024/04/12`**: ✨✨✨SMPL & Rendering scripts released! Champ your dance videos now💃🤸‍♂️🕺. See [docs](https://github.com/fudan-generative-vision/champ/blob/master/docs/data_process.md).
-  
-- **`2024/03/30`**: 🚀🚀🚀Amazing [ComfyUI Wrapper](https://github.com/kijai/ComfyUI-champWrapper) by community. Here is the [video tutorial](https://www.youtube.com/watch?app=desktop&v=cbElsTBv2-A). Thanks to [@kijai](https://github.com/kijai)🥳
-  
-- **`2024/03/27`**: Cool Demo on [replicate](https://replicate.com/camenduru/champ)🌟. Thanks to [@camenduru](https://github.com/camenduru)👏
-
-- **`2024/03/27`**: Visit our [roadmap🕒](#roadmap) to preview the future of Champ.
-
 # Installation
 
 - System requirement: Ubuntu20.04/Windows 11, Cuda 12.1
 - Tested GPUs: A100, RTX3090
+
+Install conda 
+
+```bash
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm -rf ~/miniconda3/miniconda.sh
+```
+
+Init Conda 
+
+```bash
+~/miniconda3/bin/conda init bash
+~/miniconda3/bin/conda init zsh
+```
+
+Restart terminal
 
 Create conda environment:
 
@@ -80,6 +50,12 @@ The inference entrypoint script is `${PROJECT_ROOT}/inference.py`. Before testin
 ## Download pretrained models
 
 You can easily get all pretrained models required by inference from our [HuggingFace repo](https://huggingface.co/fudan-generative-ai/champ).
+
+Install git-lfs
+```bash
+  sudo apt update
+  sudo apt install git-lfs
+```
 
 Clone the the pretrained models into `${PROJECT_ROOT}/pretrained_models` directory by cmd below:
 ```shell
